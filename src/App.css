@@ -34,7 +34,7 @@ input {
 #serviceLevel,
 #duration,
 #noticePeriod {
-  width: 100px;
+  width: 200px;
 }
 label[for="duration"],
 label[for="noticePeriod"],
@@ -59,4 +59,7 @@ select[name="contractType"] {
 }
 .card-header h3 {
   display: inline-block;
+}
+#customer {
+  width: 400px;
 }

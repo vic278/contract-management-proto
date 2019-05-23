@@ -39,7 +39,7 @@ export let contracts = [
 
 export const Nav = () => (
   <header style={{ textAlign: "center" }}>
-    <div className="logo">Commehr</div>
+    <div className="logo">Company Name</div>
   </header>
 );
 

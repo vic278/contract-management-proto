@@ -6,12 +6,10 @@ import {
   Button,
   CardBody,
   Card,
-  UncontrolledCollapse,
   Form,
   FormGroup,
   Label,
   Input,
-  FormText,
   CardHeader
 } from "reactstrap";
 import DatePicker from "react-datepicker";
@@ -40,7 +38,7 @@ class App extends React.Component {
     this.contract.id = Math.floor(Math.random(0, 100000) + 1);
     this.contract.version = 1.0;
     this.contract.status = "Wartet auf Aktivierung";
-
+    console.log(this.contract);
     contracts.push(this.contract);
     this.setState({ data: contracts });
     document.getElementById("newContract").reset();
@@ -130,13 +128,33 @@ class App extends React.Component {
             </CardHeader>
             <CardBody>
               <Form action="#" id="newContract">
-                <Label for="customer">Customer</Label>
+                <Label for="customer">Client</Label>
                 <Input
-                  type="text"
-                  id="customer"
+                  type="select"
                   name="customer"
+                  id="customer"
+                  className="mb-2"
                   onChange={e => this.fillContract("customer", e.target.value)}
-                />
+                >
+                  <option>Select company</option>
+                  <option>German Deep Tech I GmbH</option>
+                  <option>plet.at - Kommerzielle Hotellsungen</option>
+                  <option>ML!PA Consulting GmbH</option>
+                  <option>Linkmehr</option>
+                  <option>DeinDesign GmbH</option>
+                  <option>q-bus Mediatektur GmbH</option>
+                  <option>John-F.-Kennedy-Schule</option>
+                  <option>shobbits GmbH</option>
+                  <option>Herr Hegenbarth GmbH</option>
+                  <option>GetYourGuide Deutschland GmbH</option>
+                  <option>Stiefelparadies GmbH</option>
+                  <option>Alsterspree Verlag</option>
+                  <option>Roden GmbH</option>
+                  <option>Flaconi GmbH</option>
+                  <option>zeotap GmbH</option>
+                  <option>HitFox Group GmbH</option>
+                  <option>Zeitgold GmbH</option>
+                </Input>
 
                 <Label for="sapId">SAP customer id</Label>
                 <Input
@@ -185,11 +203,31 @@ class App extends React.Component {
               <Form>
                 <Label for="customer">Client</Label>
                 <Input
-                  type="text"
-                  id="customer"
+                  type="select"
                   name="customer"
+                  id="customer"
+                  className="mb-2"
                   onChange={e => this.fillContract("customer", e.target.value)}
-                />
+                >
+                  <option>Select company</option>
+                  <option>German Deep Tech I GmbH</option>
+                  <option>plet.at - Kommerzielle Hotellsungen</option>
+                  <option>ML!PA Consulting GmbH</option>
+                  <option>Linkmehr</option>
+                  <option>DeinDesign GmbH</option>
+                  <option>q-bus Mediatektur GmbH</option>
+                  <option>John-F.-Kennedy-Schule</option>
+                  <option>shobbits GmbH</option>
+                  <option>Herr Hegenbarth GmbH</option>
+                  <option>GetYourGuide Deutschland GmbH</option>
+                  <option>Stiefelparadies GmbH</option>
+                  <option>Alsterspree Verlag</option>
+                  <option>Roden GmbH</option>
+                  <option>Flaconi GmbH</option>
+                  <option>zeotap GmbH</option>
+                  <option>HitFox Group GmbH</option>
+                  <option>Zeitgold GmbH</option>
+                </Input>
 
                 <Label for="sapId">SAP customer id</Label>
                 <Input
@@ -227,6 +265,7 @@ class App extends React.Component {
                       this.fillContract("serviceLevel", e.target.value)
                     }
                   >
+                    <option>Select</option>
                     <option>Silver</option>
                     <option>Gold</option>
                     <option>Platimun</option>
@@ -245,6 +284,7 @@ class App extends React.Component {
                       this.fillContract("duration", e.target.value)
                     }
                   >
+                    <option>Select duration</option>
                     <option>12</option>
                     <option>24</option>
                     <option>36</option>
@@ -271,6 +311,7 @@ class App extends React.Component {
                       this.fillContract("noticePeriod", e.target.value)
                     }
                   >
+                    <option>Select period</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>

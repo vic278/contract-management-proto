@@ -1,0 +1,62 @@
+#root {
+  width: 80vw;
+  margin: 0 auto;
+}
+header {
+  min-height: 100px;
+  padding-top: 20px;
+}
+.logo {
+  float: left;
+}
+nav {
+  float: right;
+}
+.page-nav {
+  margin: 10px 0 20px 0;
+}
+label,
+input {
+  display: block;
+}
+form,
+.new-contract,
+.card,
+#newMaintenanceToggle {
+  margin-bottom: 20px;
+}
+.btn-outline-info {
+  background-color: #fff;
+}
+input {
+  margin-bottom: 10px;
+}
+#serviceLevel,
+#duration,
+#noticePeriod {
+  width: 100px;
+}
+label[for="duration"],
+label[for="noticePeriod"],
+label[for="contractStart"] {
+  display: inline;
+}
+#duration,
+#noticePeriod {
+  display: inline-block;
+  width: 70px;
+}
+input[type="submit"] {
+  width: 100px;
+}
+
+input[type="submit"].create-contract {
+  width: 150px;
+}
+select[name="contractType"] {
+  width: 200px;
+  display: inline-block;
+}
+.card-header h3 {
+  display: inline-block;
+}
